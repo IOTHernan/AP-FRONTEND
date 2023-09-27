@@ -1,0 +1,426 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+	box-sizing: border-box;
+}
+
+.bgblack {
+	background-color: #000;
+}
+.allScreen {
+	width: 100%;
+	height: 100%;
+}
+
+navbar {
+	background-color: #000;
+	width: 100%;
+}
+.box1 {
+	border: 2px solid #000;
+}
+
+/* Puede agregar estilos globales a este archivo y también importar otros archivos de estilo */
+/* body {
+	background-color: rgb(224, 221, 221);
+} */
+
+li {
+	list-style: none;
+}
+
+i {
+	padding: 5px;
+}
+
+#nav-title {
+	padding: 10px;
+	font-weight: 600;
+}
+.chec {
+    margin: 10px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.card {
+	background-color: #000;
+	width: auto;
+	height: auto;
+}
+
+.checentro {
+	align-items: center;
+	justify-content: center;
+
+}
+
+mat-card {
+	/* border-radius: 10px 10px 10px 10px; */
+	margin: 10px 10px 10px 10px;
+	padding: 3px;
+	width: 90%;
+}
+
+.mdc-card__actions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* box-sizing: border-box; */
+	min-height: 52px;
+	padding: 8px;
+	justify-content: flex-end;
+}
+
+.mat-mdc-card-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* box-sizing: border-box; */
+	min-height: 52px;
+	padding: 8px;
+	justify-content: center;
+}
+
+.mat-mdc-card-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* box-sizing: border-box; */
+	min-height: 52px;
+	padding: 8px;
+	justify-content: center;
+}
+
+.mat-mdc-card-footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-sizing: border-box;
+	min-height: 52px;
+	padding: 8px;
+	justify-content: center;
+}
+
+.mdc-card__media {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/* box-sizing: border-box; */
+	min-height: 52px;
+	padding: 8px;
+	justify-content: center;
+}
+
+.mat-mdc-dialog-container {
+	width: 100%;
+	height: auto;
+	--mdc-dialog-container-elevation-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+	--mdc-dialog-container-shadow-color: #000;
+	--mdc-dialog-container-shape: 4px;
+	--mdc-dialog-container-elevation: var(--mdc-dialog-container-elevation-shadow);
+	outline: 0;
+}
+
+.mdc-dialog__surface {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 0;
+	flex-shrink: 0;
+	/* box-sizing: border-box; */
+	max-width: 100%;
+	max-height: 100%;
+	pointer-events: auto;
+	overflow-y: auto;
+	outline: 0;
+}
+
+.mdc-dialog__content>:first-child {
+	margin-top: 0;
+}
+
+.mdc-dialog__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	/* box-sizing: border-box; */
+	height: 100%;
+	transform: scale(0.8);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__container {
+	transition-duration: var(--mat-dialog-transition-duration, 0ms);
+}
+
+.mat-mdc-dialog-container,
+.mat-mdc-dialog-container .mdc-dialog__container,
+.mat-mdc-dialog-container .mdc-dialog__surface {
+	max-height: inherit;
+	min-height: inherit;
+	min-width: inherit;
+	max-width: inherit;
+}
+
+.mdc-dialog--open .mdc-dialog__container {
+	transform: scale(1.5);
+	opacity: 2;
+}
+
+.mdc-dialog__container {
+	width: 550px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	height: 100%;
+	transform: scale(0.8);
+	opacity: 0;
+	pointer-events: none;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+/*  .mat-card {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px 10px 40px 10px;
+    padding: 3px;
+    width: 80%;
+    height: 400px;
+} */
+.example-card {
+	max-width: 400px;
+}
+
+img.mat-card-image {
+	width: 150px;
+	height: 150px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-image {
+	width: 150px;
+	height: 150px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-title {
+	text-align: center;
+	background-color: gray;
+}
+
+.mat-button {
+	margin-left: 5px;
+	margin-right: 5px;
+	color: blue;
+	background-color: yellow;
+}
+
+#info-data {
+	display: flex;
+	justify-content: space-between;
+}
+
+#card-about>img {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-self: center;
+	align-content: center;
+}
+
+#img-about {
+	border-radius: 50%;
+	width: 152px;
+	height: 152px;
+	margin-left: -10px;
+	margin-top: -110px;
+	z-index: 1;
+	box-shadow: 0px 5px 0px rgba(81, 71, 139, 0.171);
+}
+
+#info {
+	padding: 2rem;
+	/*Padding relativo para que se ajuste al tamaño del contenedor*/
+}
+
+#info-action {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* 
+    Esto genera el overflow
+    #info-details {
+    width: 300px;
+    flex-shrink: 0;
+} */
+
+
+#info-details ul {
+	list-style: none;
+}
+
+#info-details li a {
+	color: black;
+	text-decoration: none;
+}
+
+#info-details li a img {
+	width: 40px;
+	height: 40px;
+	margin-right: 8px;
+}
+
+#info-details li a h5 {
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.progress {
+	border-radius: 10px;
+}
+
+.progress .progress-bar {
+	border-radius: 10px;
+}
+
+.font1 {
+	font-family: "Comic Sans HS", "Comic Sans", cursive;
+}
+
+.font2 {
+	font-family: "Arial";
+}
+
+.chelogo-sm {
+	width: 1.2em;
+	height: 1.2em;
+	margin: .5em;
+	transition: .3s;
+}
+.chelogo {
+	height: 32px;
+	width: 32px;
+	margin: 0;
+
+}
+
+.cheimg, .cheimage {
+	height: 150px;
+	width: 150px;
+	/* position: absolute; */
+}
+
+
+.chebox {
+	height: auto;
+	width: auto;
+	border: 3px solid blue;
+	margin: 3px 3px 3px 3px;
+	padding: 3px 3px 3px 3px;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.span.iz {
+	text-align: left;
+}
+
+.borde1 {
+	border: 1px solid blue;
+}
+
+.borde2 {
+	border: 3px double red;
+}
+
+.borde3 {
+	border: 5px solid black;
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 10px 10px 10px;
+	margin-right: 10px;
+	background-color: green;
+	color: red;
+}
+
+.cheboxm {
+	max-height: 60px;
+	max-width: 100px;
+	border: 3px solid blue;
+	border-radius: 3%;
+	margin: 3px 3px 3px 3px;
+	padding: 5px 5px 5px 5px;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.checardcontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 16px;
+}
+
+.checard {
+	all: unset;
+	border-radius: 4px;
+	/* border: 1px solid #eee; */
+	/* background-color: #fafafa; */
+	height: 400px;
+	width: 200px;
+	margin: 0 8px 16px;
+	padding: 6px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.2s ease-in-out;
+	line-height: 24px;
+}
+
+.slidein {
+	animation-duration: 3s;
+	animation-name: slidein;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+  }
+  
+/*   @keyframes slidein {
+	from {
+	  margin-left:100%;
+	  width:300%
+	}
+  
+	to {
+	 margin-left:0%;
+	 width:100%;
+   }
+  } */
+  

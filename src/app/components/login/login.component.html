@@ -1,0 +1,62 @@
+
+<app-navbar></app-navbar>
+
+<div class="container-fluid bgblack d-flex justify-content-center">
+	<div class="row justify-content-center col-10">
+		<form *ngIf="!registerMode" (ngSubmit)="onLogin($event)" class="m-5 col-md-4 col-sm-10 bg-white p-3 rounded shadow" [formGroup]="form"> <!-- [formGroup]="form" -->
+			<h3 class="text-center text-warning">PORTAFOLIO</h3>
+			<div class="mb-3 mt-3">
+				<label for="email" class="form-label">Correo electrónico</label>
+				<input type="text" formControlName="email" matTooltip="Ingrese su correo electrónico..." [ngClass] = "{'is-invalid': email?.errors && email?.touched, 'is-valid': !email?.errors && email?.touched}"
+					class="form-control" id="email" (ng-dirty)="cheFormVistaPrevia()">
+				<div *ngIf="email?.errors && email?.touched">
+					<p *ngIf="email?.hasError('required')" class="text-danger">
+						El correo electrónico es requerido.
+					</p>
+					<p *ngIf="email?.hasError('email')" class="text-danger">
+						El formato del correo electrónico debe ser válido.
+					</p>
+				</div>
+			</div>
+			<div class="mb-5">
+				<label for="password" class="form-label">Contraseña</label>
+				<input type="password" formControlName="password" matTooltip="Ingrese su contraseña..." [ngClass] = "{'is-invalid': password?.errors && password?.touched, 'is-valid': !password?.errors && password?.touched}"
+					class="form-control" id="password" (ng-dirty)="cheFormVistaPrevia()">
+				<div *ngIf="password?.errors && password?.touched">
+					<p *ngIf="password?.hasError('required')" class="text-danger">
+						La contraseña es requerida.
+					</p>
+					<p *ngIf="password?.errors?.['minlength']" class="text-danger">
+						La contraseña debe ser de 8 o más caracteres.
+					</p>
+				</div>
+			</div>
+			<!-- <button (ngSubmit)="onLogin($event)">Iniciar</button> -->
+			<!-- <button class="btn btn-primary" (click)="loginAnonimo()">Inicia sesión vista previa...</button> -->
+			<!-- <button class="btn btn-primary" (click)="loginWithGoogle()" matTooltip="Inicie sesión con una cuenta de Google...">Iniciar sesión con Google</button> -->
+			<!-- <button class="btn btn-primary" (click)="loginWithGitHub()" matTooltip="Inicie sesión con una cuenta de GitHub...">Iniciar sesión con GitHub</button> -->
+			<!-- <p class="forgot-password"><a href="#" matTooltip="Restablecer su contraseña...">¿Olvidaste tu contraseña?</a></p>(click)="forgotPassword()" -->
+			<!-- <p class="delete-account"><a href="#" (click)="deleteAccount()" matTooltip="Eliminar su cuenta de usuario...">Darse de baja</a></p> -->
+			<button type="submit" class="btn btn-skyblue btn-sm w-100 fw-bold text-light border border-light">INICIAR
+				SESION</button>
+		</form>
+		<h1 class="text-center mt-2 text-white fw-bold"><br>-----------</h1>
+	</div>
+</div>
+
+<!-- Otros campos para el registro -->
+<!-- <form *ngIf="registerMode" (ngSubmit)="onRegister()">
+	
+	<input type="text" [(ngModel)]="email" name="email?" placeholder="email" required>
+	<input type="text" [(ngModel)]="firstName" name="firstName" placeholder="Nombre" required>
+	<input type="text" [(ngModel)]="lastName" name="lastName" placeholder="apellido" required>
+	<input type="text" [(ngModel)]="displayName" name="displayName" placeholder="Alias" required>
+	<input type="text" [(ngModel)]="phone" name="phone" placeholder="phone" required>
+	<input type="text" [(ngModel)]="address" name="address" placeholder="address" required>
+	<input type="text" [(ngModel)]="photoURL" name="photoURL" placeholder="photoURL" required>
+	 --><!-- ....otros campos.... -->
+	<!-- <button type="submit">Registrarse</button>
+	<button type="button" (click)="toggleRegisterMode()">Volver al inicio de sesión</button> -->
+
+
+<app-footer></app-footer>

@@ -1,0 +1,69 @@
+<!--------------- EXPERIENCIA MAT-CARD	 --------------->
+<section class="card mat-card mx-auto chec bgblack" id="experiencia" style="margin: 10px;">
+	<div class="container shadow">
+		<div class="row">
+			<h5 class="text-center p-1 bg-dark text-light rounded border p-2">EXPERIENCIA</h5>
+		</div>
+		<div class="justify-content-center p-2">
+			<div class="d-flex justify-content-center mb-4 m-4">
+				<button mat-raised-button (click)="openAddDialog()"
+					class="btn btn-sm btn-green border shadow m-1 text-center text-light fw-bold">
+					<span><img src={{logoadd}} alt="editar" class="chelogo-sm mt-1 bg-white rounded-circle" />AGREGAR
+						EXPERIENCIA</span>
+				</button>
+			</div>
+
+			<div *ngFor="let item of datosArray">  <!--  ; let i = index" [attr.data-index]="i" -->
+				<mat-card (click)="selectExperiencia(item)">
+					<mat-card-actions>
+						<div class="align-items-end box1">
+							<button (click)="openEditDialog(item)">
+								<img src={{logopencil}} alt="editar" class="chelogo mt-1" />
+							</button>
+							<button (click)="deleteItem(item.id)">
+								<img src={{logodelete}} alt="Eliminar" class="chelogo mt-1" />
+							</button>
+						</div>
+					</mat-card-actions>
+					<mat-card-content>
+						<h4><b>Ubicación: </b>{{item.ubicacion}}</h4>
+						<h4><b>Puesto: </b>{{item.puesto}}</h4>
+						<h4><b>Periodo: </b>{{item.periodo}}</h4>
+						<h4><b>Empresa: </b>{{item.empresa}}</h4>
+						<h4><b>Actividades: </b>{{item.actividades}}</h4>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #dialogTemplate let-dialogRef="dialogRef">
+		<h2 mat-dialog-title>{{ editMode ? 'Editar Experiencia' : 'Añadir Experiencia' }}</h2>
+		<mat-dialog-content>
+			<mat-form-field>
+				<mat-label>Ubicación</mat-label>
+				<input matInput [(ngModel)]="dialogData.ubicacion" placeholder="Ubicación" required>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Puesto</mat-label>
+				<input matInput [(ngModel)]="dialogData.puesto" placeholder="Puesto" required>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Periodo</mat-label>
+				<input matInput [(ngModel)]="dialogData.periodo" placeholder="Periodo" required>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Empresa</mat-label>
+				<input matInput [(ngModel)]="dialogData.empresa" placeholder="Empresa" required>
+			</mat-form-field>
+			<mat-form-field>
+				<mat-label>Actividades</mat-label>
+				<input matInput [(ngModel)]="dialogData.actividades" placeholder="Actividades" required>
+			</mat-form-field>
+		</mat-dialog-content>
+		<mat-dialog-actions>
+			<button mat-button (click)="dialogRef.close()">Cancelar</button>
+			<button mat-button (click)="saveItem()">Guardar</button> <!-- [disabled]="!dialogForm.valid" -->
+		</mat-dialog-actions>
+	</ng-template>
+</section>

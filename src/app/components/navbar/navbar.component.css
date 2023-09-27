@@ -1,0 +1,28 @@
+.chenavbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    left: 0;
+    /* height: fit-content; */
+}
+.logointi{
+    justify-content: start;
+    width: 150px;
+    height: 40px;
+}
+.logos {
+    width: 40px;
+    height: 40px;
+}
+#cheyoutube::before {
+    width: 50px;
+}
+#cheyoutube::after {
+    width: 40px;
+}
+.bggray {
+	background-color: gray;
+}
+.tyellow {
+	color: yellow;
+}

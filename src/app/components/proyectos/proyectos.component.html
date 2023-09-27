@@ -1,0 +1,82 @@
+<!--------------- PROYECTOS --------------->
+<section class="card mat-card mx-auto chec bgblack" id="proyecto" style="margin: 10px;">
+	<div class="container shadow">
+		<div class="row">
+			<h5 class="text-center p-1 bg-dark text-light rounded  p-2">PROYECTOS</h5>
+		</div>
+		<div class="justify-content-center p-2">
+			<div class="d-flex justify-content-center mb-4 m-4">
+				<button mat-raised-button (click)="openAddDialog()"
+					class="btn btn-sm btn-green border shadow m-1 text-center text-light fw-bold">
+					<span><img src={{logoadd}} class="chelogo-sm  mt-1 bg-white rounded-circle" alt="">AGREGAR
+						PROYECTOS</span>
+				</button>
+			</div>
+
+			<div *ngFor="let item of datosArray  ; let i = index" [attr.data-index]="i">
+				<mat-card (click)="selectProyecto(item)">
+					<mat-card-actions>
+						<div class="align-items-end box1">
+
+							<button (click)="openEditDialog(item)">
+								<img src={{logopencil}} alt="editar" class="chelogo mt-1" />
+							</button>
+							<button (click)="deleteItem(item.id)">
+								<img src={{logodelete}} alt="Eliminar" class="chelogo mt-1" />
+							</button>
+						</div>
+					</mat-card-actions>
+					<mat-card-header>
+						<h4><b>Titulo: </b>{{item.titulo}}</h4>
+					</mat-card-header>
+					<mat-card-content>
+						<div
+							class="d-flex container-fluid flex-direction-row justify-content-center align-items-center">
+							<img mat-card-image class="cheimg" src={{item.imagen}} alt="">
+						</div>
+					</mat-card-content>
+					<mat-card-footer>
+						<h6><b>Descripción: </b>{{item.descripcion}}</h6>
+					</mat-card-footer>
+				</mat-card>
+
+			</div>
+		</div>
+
+		<ng-template #dialogTemplate let-dialogRef="dialogRef">
+			<h2 mat-dialog-title>{{ editMode ? 'Editar Proyecto' : 'Añadir Proyecto' }}</h2>
+			<mat-dialog-content>
+				<mat-form-field>
+					<mat-label>Titulo</mat-label>
+					<input matInput [(ngModel)]="dialogData.titulo" placeholder="Titulo" required>
+				</mat-form-field>
+				<mat-form-field>
+					<mat-label>URL de la imagen</mat-label>
+					<input type="text" [(ngModel)]="dialogData.imagen" placeholder="Imagen"
+						required><!-- (change)="onFileSelected($event)" -->
+				</mat-form-field>
+				<!-- <mat-label>Subir imagen</mat-label> -->
+				<!-- <input type="file" name="onFile" (change)="onFileSelected($event)" id="onFile" -->
+				<!-- placeholder="Imagen"> -->
+				<ng-container *ngIf="downloadURL===null">
+					<script>this.downloadURL = this.dialogData.imagen; console.log('imagen:', this.downloadURL);</script>
+					<!-- <img src={{this.dialogData.imagen}} alt="" class="preview-image"> -->
+					<!-- <img [src]="downloadURL" alt="Preview" class="preview-image"> -->
+				</ng-container>
+				<ng-container *ngIf="downloadURL">
+					<!-- <img src={{this.dialogData.imagen}} alt="" class="preview-image"> -->
+					<img [src]="downloadURL" alt="Preview" class="preview-image">
+				</ng-container>
+				<mat-form-field>
+					<mat-label>Descripción</mat-label>
+					<input matInput [(ngModel)]="dialogData.descripcion" placeholder="Descripción" required>
+				</mat-form-field>
+
+			</mat-dialog-content>
+			<mat-dialog-actions>
+				<button mat-button (click)="dialogRef.close()">Cancelar</button>
+				<button mat-button (click)="saveItem()">Guardar</button> <!-- [disabled]="!dialogForm.valid" -->
+			</mat-dialog-actions>
+		</ng-template>
+	</div>
+</section>

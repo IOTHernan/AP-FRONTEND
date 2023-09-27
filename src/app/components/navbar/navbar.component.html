@@ -1,0 +1,72 @@
+<div class="d-flex container chenavbar shadow bgblack">
+	<div class="d-flex container-fluid align-items-center justify-content-center">
+		<a href="https://argentinaprograma.inti.gov.ar" target="_blank" class="nav-link active"
+			matTooltip="Instituto Nacional de Tecnología Industrial...">
+			<img class="logointi" src="https://drive.google.com/uc?download&id=1YpESKuvXAUsP1TcJ-laFQlsmOKAf8VkP"
+				alt="Instituto Nacional de Tecnología Industrial...">
+		</a>
+	</div>
+	<div class="d-flex container align-items-center justify-content-center w-40">
+		<p class="fw-bold ms-3 mt-3 tyellow">Proyecto Integrador</p>
+	</div>
+	<div class="d-flex container-fluid align-items-center justify-content-center shadow">
+		<a href="https://github.com/HCanestraro" target="_blank" class="nav-link active" rel="noreferrer noopener"
+			matTooltip="Link Github Web...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=1YFszfvj_-afq1bH9tsXXF8zrDOQvHxo-
+			" alt="Link Github Web...">
+		</a>
+		<a href="https://instagram.com/@canestraro-che" target="_blank" class="nav-link active"
+			rel="noreferrer noopener" matTooltip="Link a Instagram...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=13jp0SW_F2WCL5qAiRhDlZWXHoUMlN2gR
+			" alt="Link a Instagram...">
+		</a>
+		<a href="https://www.twitter.com/@canestraro-che" target="_blank" class="nav-link active"
+			rel="noreferrer noopener" matTooltip="Link a Twitter...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=1BXwyUpUm_AnXnh4-xIIUv8gdvYOU0quV
+			" alt="Link a Twitter...">
+		</a>
+		<a href="https://ar.linkedin.com/in/hernan-canestraro-44448435" target="_blank" class="nav-link active"
+			rel="noreferrer noopener" matTooltip="Link a LinkedIn...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=1tDmdALAhhy9kS6edRWUqDgt4QJUuXaMd
+			" alt="Link a LinkedIn...">
+		</a>
+		<a href="https://sites.google.com/view/HCanestraro" target="_blank" class="nav-link active"
+			rel="noreferrer noopener" matTooltip="Link a mí sitio...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=1NuIu3CYzCAZ_F34TH6zXTdHo1-BiP-GP
+			" alt="Link a mí sitio...">
+		</a>
+		<a href="https://www.youtube.com/@HCanestraro" target="_blank" class="nav-link active" rel="noreferrer noopener"
+			matTooltip="Link a mí canal de YouTube...">
+			<img class="logos" src="https://drive.google.com/uc?export=download&id=1Fi4F7MzyrKIAIkK3bdNSeZ3oNjb5ly11
+			" alt="Link a mí canal de YouTube..." id="#cheyoutube">
+		</a>
+	</div>
+	<div class="d-flex container-fluid align-items-center justify-content-center">
+		<div *ngIf="portfolioActive===true" class="d-flex container-fluid align-items-center justify-content-center">
+			<button mat-raised-button [matMenuTriggerFor]="menu" class="btn btn-primary">Menu</button>
+			<div *ngIf="imagenPerfil" class="container">
+				<img mat-card-image src={{imagenPerfil}} alt="Imagen de perfil" class="chelogo">
+			</div>
+			<div>
+				<mat-menu #menu="matMenu">
+					<!-- <div *ngIf="usuarioLogueado"> -->
+					<!-- <p>{{userAlias}}</p> -->
+					<button mat-raiser-button (click)="logout()" routerLink="/login"
+						matTooltip="Finalizar la edición...">TERMINAR EDICIÓN</button>
+				</mat-menu>
+			</div>
+		</div>
+		<div *ngIf="portfolioActive===false" class="d-flex container-fluid align-items-center justify-content-center">
+			<button mat-raised-button [matMenuTriggerFor]="menu" class="btn btn-primary">Menu</button>>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item routerLink="/register"
+					matTooltip="Registrarse como nuevo usuario...">Registrarse</button>
+				<button mat-menu-item routerLink="/login" MatTooltip="Iniciar sesión de usuario...">Login</button>
+			</mat-menu>
+
+			<!-- <button class="btn btn-info border border-info text-white fw-bold fw-bold shadow ms-3" routerLink="/register" 			matTooltip="Registrarse como nuevo usuario...">Registrarse</button> -->
+			<!-- <button class="btn btn-info text-white fw-bold shadow-lg" routerLink="/login" MatTooltip="Iniciar sesión de usuario...">Login</button> -->
+		</div>
+	</div>
+
+	<!-- ****************************************************************************** -->

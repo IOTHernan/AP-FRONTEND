@@ -1,0 +1,17 @@
+.chefooter {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
+    font-family:  sans-serif,Arial, Helvetica; 
+    text-shadow: chocolate;
+    background-color: black;
+    color: chartreuse;
+    text-align: center;
+    /* margin: 15px; */
+    /* padding: 4px; */
+    justify-content: center;
+    align-items: center;
+}

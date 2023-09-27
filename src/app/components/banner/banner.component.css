@@ -1,0 +1,21 @@
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+.modal {
+    display: none;
+    overflow: visible;
+}
+.modal.fade.show {
+    display: block;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: visibleFill;
+}
+
+.modal.fade .modal-dialog {
+    transition: translate(0,0);
+    pointer-events: auto;
+}

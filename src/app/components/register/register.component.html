@@ -1,0 +1,143 @@
+<!-- ****************************** REGISTER ******************** -->
+<div class="container shadow">
+	<div class="row">
+		<h5 class="text-center p-1 bg-dark text-light rounded border p-2">REGISTRARSE</h5>
+	</div>
+	<div class="justify-content-center p-2">
+		<div class="container-fluid  d-flex justify-content-center">
+			<div class="row justify-content-center col-10 mt-3">
+				<form class="rounded shadow" [formGroup]="form" (ngSubmit)="onRegister($event)" id="form">
+					<h3 class="text-center text-info mt-2">¡CREAR TU USUARIO!</h3>
+
+					<div class="mb-1 mt-1">
+						<label for="email" class="form-label">Correo electrónico:</label>
+						<input  type="text" formControlName="email"
+							[ngClass]="{'is-invalid': email?.errors && email?.touched, 'is-valid': !email?.errors && email?.touched}"
+							class="form-control" id="email" aria-describedby="emailHelp">
+						<div *ngIf="email?.errors && email?.touched">
+							<p *ngIf="email?.hasError('required')" class="text-danger">
+								El email es requerido.
+							</p>
+							<p *ngIf="email?.hasError('email')" class="text-danger">
+								El formato del email debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1">
+						<label>Contraseña:</label>
+						<input  type="password" formControlName="password"
+							[ngClass]="{'is-invalid': password?.errors && password?.touched, 'is-valid': !password?.errors && password?.touched}"
+							class="form-control" id="password">
+						<div *ngIf="password?.errors && password?.touched">
+							<p *ngIf="password?.hasError('required')" class="text-danger">
+								La contraseña es requerida.
+							</p>
+							<p *ngIf="password?.errors?.['minlength']" class="text-danger">
+								La contraseña debe ser de 8 o más caracteres.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Nombre:</label>
+						<input  type="text" formControlName="firstName"
+							[ngClass]="{'is-invalid': firstName?.errors && firstName?.touched, 'is-valid': !firstName?.errors && firstName?.touched}"
+							class="form-control" id="firstName" aria-describedby="firstNameHelp">
+						<div *ngIf="firstName?.errors && firstName?.touched">
+							<p *ngIf="firstName?.hasError('required')" class="text-danger">
+								El nombre es requerido.
+							</p>
+							<p *ngIf="firstName?.hasError('firstName')" class="text-danger">
+								El formato del nombre debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Apellido:</label>
+						<input  type="text" formControlName="lastName"
+							[ngClass]="{'is-invalid': lastName?.errors && lastName?.touched, 'is-valid': !lastName?.errors && lastName?.touched}"
+							class="form-control" id="lastName" aria-describedby="lastNameHelp">
+						<div *ngIf="lastName?.errors && lastName?.touched">
+							<p *ngIf="lastName?.hasError('required')" class="text-danger">
+								El apellido es requerido.
+							</p>
+							<p *ngIf="lastName?.hasError('lastName')" class="text-danger">
+								El formato del apellido debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Alias:</label>
+						<input  type="text" formControlName="displayName"
+							[ngClass]="{'is-invalid': displayName?.errors && displayName?.touched, 'is-valid': !displayName?.errors && displayName?.touched}"
+							class="form-control" id="displayName" aria-describedby="displayHelp">
+						<div *ngIf="displayName?.errors && displayName?.touched">
+							<p *ngIf="displayName?.hasError('required')" class="text-danger">
+								El alias es requerido.
+							</p>
+							<p *ngIf="displayName?.hasError('displayName')" class="text-danger">
+								El formato del alias debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Teléfono:</label>
+						<input  type="text" formControlName="phone"
+							[ngClass]="{'is-invalid': phone?.errors && phone?.touched, 'is-valid': !phone?.errors && phone?.touched}"
+							class="form-control" id="phone" aria-describedby="phoneHelp">
+						<div *ngIf="phone?.errors && phone?.touched">
+							<p *ngIf="phone?.hasError('required')" class="text-danger">
+								El teléfono es requerido.
+							</p>
+							<p *ngIf="phone?.hasError('phone')" class="text-danger">
+								El formato del teléfono debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Dirección:</label>
+						<input  type="text" formControlName="address"
+							[ngClass]="{'is-invalid': address?.errors && address?.touched, 'is-valid': !address?.errors && address?.touched}"
+							class="form-control" id="address" aria-describedby="addressHelp">
+						<div *ngIf="address?.errors && address?.touched">
+							<p *ngIf="address?.hasError('required')" class="text-danger">
+								La dirección es requerida.
+							</p>
+							<p *ngIf="address?.hasError('address')" class="text-danger">
+								El formato del nombre debe ser válido.
+							</p>
+						</div>
+					</div>
+					<div class="mb-1 mt-3">
+						<label>Foto URL:</label>
+						<input  type="text" formControlName="photoURL"
+							[ngClass]="{'is-invalid': photoURL?.errors && photoURL?.touched, 'is-valid': !photoURL?.errors && photoURL?.touched}"
+							class="form-control" id="photoURL" aria-describedby="photoHelp">
+						<div *ngIf="photoURL?.errors && photoURL?.touched">
+							<p *ngIf="photoURL?.hasError('required')" class="text-danger">
+								El nombre de la URL es requerido.
+							</p>
+							<p *ngIf="photoURL?.hasError('photoURL')" class="text-danger">
+								El formato de la URL debe ser válido.
+							</p>
+						</div>
+					</div>
+
+					<label>file Foto URL:</label>
+					<input type="file" formControlName="photoURL" (change)="onFileSelected($event)"
+						id="filephotoURL" aria-describedby="filephotoHelp">
+					<ng-container *ngIf="downloadURL">
+						<img [src]="downloadURL" alt="Preview" class="cheimage">
+					</ng-container>
+
+					<button type="submit" id="enviarBtn"
+						class="btn btn-primary btn-sm w-100 fw-bold text-light border border-light mt-3">CREAR
+						CUENTA</button>
+					<button type="text" class="btn btn-warning btn-sm w-100 fw-bold border mt-3" id="boton-cerrar"
+						(click)="cerrarFormulario()">CANCELAR</button>
+				</form>
+			
+			</div>
+		</div>
+	</div>
+</div>
+	

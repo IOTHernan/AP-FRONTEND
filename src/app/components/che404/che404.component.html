@@ -1,0 +1,26 @@
+<div class="container shadow bg-info">
+	<div class="row mt-5">
+		<h5 class="text-center p-1 bg-dark text-light rounded p-2">ERROR DE EJECUCIÓN</h5>
+	</div>
+	<div class="justify-content-center p-2"><mat-card>
+			<mat-card-header>
+				<mat-card-title>Error en la ejecución de la aplicación</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<div *ngIf="errorMessage" class="error-message">
+					<p>Error: {{ errorMessage }}</p>
+				  </div>
+				  <p>Error:{{ errorMessage }}</p>
+				<p>Componente: {{ componentName }}</p>
+				<p>Número de línea: {{ lineNumber }}</p>
+				<img class="imgErr"
+					src="https://drive.google.com/uc?export=download&id=1LyvIUTfiwW9-_vHfqutBjhAJHk38jREw" alt="Error">
+			</mat-card-content>
+			<mat-card-header>
+				<button mat-raised-button color="primary" (click)="saveAsLog()">Grabar como .log</button>
+				<button mat-raised-button color="primary" (click)="printToPdf()">Imprimir a .pdf</button>
+				<button mat-raised-button color="primary">Cerrar</button>
+			</mat-card-header>
+		</mat-card>
+	</div>
+</div>

@@ -1,0 +1,103 @@
+<!--------------- EDUCACIÓN MAT-CARD --------------->
+<section class="card mat-card mx-auto chec bgblack b01" id="educacion" style="margin: 10px;">
+	<div class="container shadow">
+		<div class="row">
+			<h5 class="text-center p-1 bg-dark text-light rounded p-2">EDUCACIÓN MAT-CARD</h5>
+		</div>
+		<div class="justify-content-center p-2">
+			<div class="d-flex justify-content-center mb-4 m-4">
+				<button mat-raised-button (click)="openAddDialog()"
+					class="btn btn-sm btn-green border shadow m-1 text-center text-light fw-bold">
+					<span><img src={{logoadd}} alt="editar" class="chelogo-sm mt-1 bg-white rounded-circle" />AGREGAR
+						EDUCACIÓN</span>
+				</button>
+			</div>
+			<div *ngFor="let item of datosArray  ; let i = index" [attr.data-index]="i">
+				<mat-card (click)="selectEducacion(item)">
+					<mat-card-actions>
+						<div class="align-items-end box1">
+							<button (click)="openEditDialog(item)">
+								<img src={{logopencil}} class="chelogo" alt="Editar...">
+							</button>
+							<button (click)="deleteItem(item.id)">
+								<img src={{logodelete}} class="chelogo" alt="Eliminar...">
+							</button>
+						</div>
+					</mat-card-actions>
+					<mat-card-content class="align-items-center justify-content-center">
+						<h4><b>Escuela: </b>{{item.escuela}}</h4>
+						<h4><b>Titulo: </b>{{item.titulo}}</h4>
+						<div
+							class="d-flex container-fluid flex-direction-row justify-content-center align-items-center">
+							<h4><b>Imagen URL: </b></h4><span>{{item.imagen}}</span>
+						</div>
+						<div class="d-flex justify-content-center align-items-center">
+							<img class="cheimg" src={{item.imagen}} alt="">
+						</div>
+						<div class="row">
+							<div class="col border">
+
+								<h4><b>Carrera: </b>{{item.carrera}}</h4>
+								<h4><b>Puntaje: </b>{{item.puntaje}}</h4>
+							</div>
+							<div class="col border">
+
+								<h4><b>Inicio: </b>{{item.inicio}}</h4>
+								<h4><b>Fin: </b>{{item.fin}}</h4>
+							</div>
+						</div>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+		<ng-template #dialogTemplate let-dialogRef="dialogRef">
+			<h2 mat-dialog-title>{{ editMode ? 'Editar Educación' : 'Añadir Educación' }}</h2>
+			<mat-dialog-content>
+				<div class="tp-container">
+					<mat-form-field>
+						<mat-label>Escuela / Institución</mat-label>
+						<input matInput [(ngModel)]="dialogData.escuela" placeholder="Escuela" required matTooltip="Ingrese Escuela / Establecimiento...">
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Titulo</mat-label>
+						<input [(ngModel)]="dialogData.titulo" (change)="onFileSelected($event)" placeholder="Titulo"
+							required>
+					</mat-form-field>
+					<mat-label>URL de la imagen</mat-label>
+					<input type="file" [(ngModel)]="dialogData.imagen" placeholder="Imagen" id="file" name="file"
+						required>
+					<ng-container *ngIf="downloadURL">
+						<img [src]="downloadURL" alt="Preview" class="preview-image">
+					</ng-container>
+					<mat-form-field>
+						<mat-label>Carrera</mat-label>
+						<input matInput [(ngModel)]="dialogData.carrera" placeholder="Carrera" required>
+					</mat-form-field>
+					<mat-form-field>
+						<mat-label>Puntaje</mat-label>
+						<input matInput type="number" [(ngModel)]="dialogData.puntaje" placeholder="Puntaje" required>
+					</mat-form-field>
+					<div class="row">
+						<div class="col border">
+							<mat-form-field>
+								<mat-label>Inicio</mat-label>
+								<input matInput type="number" [(ngModel)]="dialogData.inicio" placeholder="Inicio" required>
+							</mat-form-field>
+						</div>
+						<div class="col border">
+							<mat-form-field>
+								<mat-label>Fin</mat-label>
+								<input matInput type="number" [(ngModel)]="dialogData.fin" placeholder="Fin" required>
+							</mat-form-field>
+						</div>
+					</div>
+				</div>
+			</mat-dialog-content>
+			<mat-dialog-actions>
+				<button mat-button (click)="dialogRef.close()">Cancelar</button>
+				<button mat-button (click)="saveItem()">Guardar</button> <!-- [disabled]="!dialogForm.valid" -->
+			</mat-dialog-actions>
+		</ng-template>
+	</div>
+</section>
+<!-- END Educacón-->

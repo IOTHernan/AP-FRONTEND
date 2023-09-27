@@ -1,0 +1,152 @@
+{
+	"id": 1,
+			"persona": [
+				{
+					"id": "1",
+					"nombres": "Hernan Canestraro",
+					"apellido": "Hernan Canestraro",
+					"fecha_nacimiento": "27/09/1976",
+					"nacionalidad": "Argentino",
+					"mail": "hernancanestraro@gmail.com",
+					"sobre_mi": "Autodidacta",
+					"ocupacion": "Programador Full Stack Jr.",
+					"image_background_header": "https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-black-shading-red-shard-geometry-banner-background-shadingred-debrisred-glowgeometry-image_80184.jpg",
+					"image_perfil": "https://drive.google.com/uc?export=download&id=1DdFJjIWAxC9QQMOaUlxnddhe5nl6YPdI",
+					"id_domicilio": "2"
+				}
+			],
+			"aboutme": [
+				{
+					"bannerImage": "https://drive.google.com/uc?export=download&id=1n7Zw94hqOWvhXpoumSTDtpM35JTr_rCY",
+					"profilePicture": "https://drive.google.com/uc?export=download&id=1cJWZ-4fWDwXLptzX6E1_rwtHB9kSiLWN",
+					"ubication": "La Matanza, Buenos Aires, Argentina",
+					"institution": "Intituto Nacional de Tecnología Industrial",
+					"institutionImage": "https://www.argentina.gob.ar/sites/default/files/logo-inti-arg-blanco_23.png",
+					"posicion": "Estudiante",
+					"descripcion": "Description",
+					"bannerImage2": "https://drive.google.com/uc?export=download&id=1H-fPPXI-WczRIV2N0cPiF2xu0_IUBklS",
+					"profilePicture2": "https://drive.google.com/uc?export=download&id=1DdFJjIWAxC9QQMOaUlxnddhe5nl6YPdI",
+					"about": "Sobre mí...Sobre mí...Sobre mí...Sobre mí...Sobre mí...Sobre mí...",
+					"company": {
+						"name": "I.N.T.I. Argentina Programa",
+						"url": "https://argentinaprograma.inti.gob.ar",
+						"logo": "https://drive.google.com/uc?export=download&id=1-lX9QgBw8iGXLEgBd_pmdsM_Fz3l6LJn"
+					}
+				}
+			],
+			"educacion": [
+				{
+					"escuela": "Escuela de Educación Media Nº 24",
+					"titulo": "Bachiller Contable",
+					"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+					"carrera": "Bachiller",
+					"puntaje": 100,
+					"inicio": "1990",
+					"fin": "1995"
+				},
+				{
+					"escuela": "Se Programar",
+					"titulo": "Se Programar",
+					"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+					"carrera": "Desarrollo de Software",
+					"puntaje": 82,
+					"inicio": "2021",
+					"fin": "2021"
+				},
+				{
+					"escuela": "Argentina Programa, MINDHUB",
+					"titulo": "FullStack FrontEnd Jr.",
+					"imagen": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+					"carrera": "Programación web",
+					"puntaje": 70,
+					"inicio": "2023",
+					"fin": "2023"
+				}
+			],
+			"experiencia": [
+				{
+					"ubicacion": "Administrador de Finanzas",
+					"puesto": "Pastas Anita",
+					"periodo": "Agosto 2020 - Febrero 2021",
+					"empresa": "IBM",
+					"actividades": "Atención al público. Diseño de publicidad para las ventas. Administrador de las finanzas del microemprendimiento y del stock del mismo"
+				},
+				{
+					"ubicacion": "Administrador de Finanzas",
+					"puesto": "Pastas Anita",
+					"periodo": "Agosto 2020 - Febrero 2021",
+					"empresa": "IBM",
+					"actividades": "Atención al público. Diseño de publicidad para las ventas. Administrador de las finanzas del microemprendimiento y del stock del mismo"
+				},
+				{
+					"ubicacion": "Defensoría del Pueblo de La Matanza",
+					"puesto": "Entrada",
+					"periodo": "Octubre 2021",
+					"empresa": "Municipio de La Matanza",
+					"actividades": "Atención al público.Tareas generales"
+				}
+			],
+			"skills": [
+				{
+					"description": "SoftSkills... Description..."
+				},
+				{
+					"description": "SoftSkills... Description..."
+				},
+				{
+					"description": "SoftSkills... Description..."
+				},
+				{
+					"description": "SoftSkills... Description..."
+				}
+			],
+			"softskills": [
+				{
+					"name": "HTML",
+					"urlImage": "https://drive.google.com/uc?export=download&id=1VvV5Ii5CwNs0E-GMHy0jjTcWiFFUODpM",
+					"level": "75"
+				},
+				{
+					"name": "CSS",
+					"urlImage": "https://drive.google.com/uc?export=download&id=1iL_jNpg0VIyZXVNsutkOtOb9RTSG1TlG",
+					"level": "65"
+				},
+				{
+					"name": "JavaScript",
+					"urlImage": "https://drive.google.com/uc?export=download&id=1nZ7LEX97bvieW2jjMazLv2dm5FljH57D",
+					"level": "70"
+				},
+				{
+					"name": "Angular",
+					"urlImage": "https://drive.google.com/uc?export=download&id=16aWcp67NV6hMOpPaAUriHvcS6AwHziZc",
+					"level": "95"
+				},
+				{
+					"name": "MySQL",
+					"urlImage": "https://drive.google.com/uc?export=download&id=1yIRdYG1ZJSzI-0yzsP16tZTHPLdYds4P",
+					"level": "60"
+				},
+				{
+					"name": "Node.JS",
+					"urlImage": "https://drive.google.com/uc?export=download&id=16K-Sj2SNUbP81JGFl5EE20fJ6esGtD3t",
+					"level": "60"
+				}
+			],
+			"proyectos": [
+				{
+					"titulo": "Proyecto Events: Argentina Programa, MINDHUB",
+					"imagen": "https://drive.google.com/uc?export=download&id=1-lX9QgBw8iGXLEgBd_pmdsM_Fz3l6LJn",
+					"descripcion": "Proyecto realizado como práctica para MINDHUB"
+				},
+				{
+					"titulo": "Proyecto FrontEnd: Argentina Programa, YoProgramo2",
+					"imagen": "https://drive.google.com/uc?export=download&id=1-lX9QgBw8iGXLEgBd_pmdsM_Fz3l6LJn",
+					"descripcion": "Proyecto realizado como práctica para la segunda etapa de Argentina Programa, #YoProgramo"
+				},
+				{
+					"titulo": "Proyecto Portfolio: Argentina Programa",
+					"imagen": "https://drive.google.com/uc?export=download&id=1-lX9QgBw8iGXLEgBd_pmdsM_Fz3l6LJn",
+					"descripcion": "Proyecto realizado como práctica para la segunda etapa de Argentina Programa, #YoProgramo"
+				}
+			]
+		}

@@ -1,0 +1,50 @@
+.logo-edu {
+	height: 2em;
+	width: 2em;
+	margin-bottom: .5em;
+}
+
+.logo-sm {
+	width: 1.2em;
+	height: 1.2em;
+	margin: .5em;
+	transition: .3s;
+}
+
+.mt-8 {
+	margin-top: 8em;
+}
+
+.btn-green {
+	background-color: rgb(41, 247, 41);
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	width: 30px;
+}
+.logoEscuela {
+	align-self: center;
+	justify-items: center;
+	width: 100px;
+	height: 100px;
+}
+.tp-container {
+	display: flex;
+	flex-direction: column;
+}
+.tp-container > * {
+	width: 100%;
+}
+.card {
+	background-color: #000;
+  }
+  .b01 {
+	border: 1px solid greenyellow;
+	border-radius: 1%;
+  }

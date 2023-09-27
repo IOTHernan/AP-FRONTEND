@@ -1,0 +1,44 @@
+.image-sm , .preview-image {
+    width: 150px;
+    height: 150px;
+}
+.logoSkills{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-color: white;
+  
+  }
+  .logo-bk {
+    background-image: "https://www.bing.com/images/search?view=detailV2&ccid=RH9H1pZq&id=F79D9F5B9FCB9F06C725E965DB9FE0616E0312E8&thid=OIP.RH9H1pZqs1XqqNhfzsaz0gHaE8&mediaurl=https%3a%2f%2fclipground.com%2fimages%2fskills-logo-8.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.447f47d6966ab355eaa8d85fcec6b3d2%3frik%3d6BIDbmHgn9tl6Q%26pid%3dImgRaw%26r%3d0&exph=600&expw=900&q=Skills+Logo&simid=608024673539030700&FORM=IRPRST&ck=8B334ABA872D3E0A83224072291DF95D&selectedIndex=12";
+  }
+  .logo-skill{
+    height: 2em;
+    width: 2em;
+    margin-bottom: .5em;
+  }
+  
+  .logo-sm{
+    width: 40px;
+    height: 40px;
+    margin: .5em;
+  }
+  
+  .mt-8{
+    margin-top: 8em;
+  }
+  
+  .btn-green{
+    background-color: rgb(41, 247, 41);
+  }
+  
+  .alineado{
+    margin-left: 4em;
+  }
+  
+  .alineado-sm{
+    margin-left: 2em;
+  }
+  .card {
+    background-color: #000;
+  }

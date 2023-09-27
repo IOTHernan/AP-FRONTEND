@@ -1,0 +1,18 @@
+.tp-fontSize {
+	font-size: large;
+}
+.tp-card {
+	margin-left: 150px;
+	max-width: 600px;
+}
+
+.btn-skyblue{
+	background-color: rgb(78, 182, 18);
+}
+  
+.mb-10{
+	margin-bottom: 10em;
+} 
+.card {
+	background-color: #000;
+  }

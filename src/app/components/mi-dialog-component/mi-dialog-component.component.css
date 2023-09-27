@@ -1,0 +1,19 @@
+.dialogc {
+    background-image: url("https://drive.google.com/uc?export=download&id=1rX5zCl1lQPjeGbYsH8BQUI-1L1HT0nL2");
+    background-repeat: repeat;
+    width: auto;
+    height: auto;
+    /* padding: 0; */
+    color:chartreuse;
+}
+.dialog-title {
+    font-size: 24px;
+    text-align: center;
+}
+.dialog-subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+button[color="primary"] {
+    color: green;
+}

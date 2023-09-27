@@ -1,0 +1,86 @@
+<!--------------- SOFTKILLS MAT-CARD --------------->
+<section class="card mat-card mx-auto chec bgblack" id="softskills" style="margin: 10px;">
+	<div class="container shadow bgblack">
+		<div class="row">
+			<h5 class="text-center p-1 bg-dark text-light rounded p-2">SOFTSKILLS MAT-CARD</h5>
+		</div>
+		<div class="justify-content-center p-2">
+			<div class="d-flex justify-content-center mb-4 m-4">
+				<button mat-raised-button (click)="openAddDialog()"
+					class="btn btn-sm btn-green border shadow m-1 text-center text-light fw-bold" matTooltip="Añadir un nuevo registro...">
+					<span><img src={{logoadd}} class="chelogo-sm mt-1 bg-white rounded-circle" alt="">AGREGAR
+						SOFTSKILLS</span>
+				</button>
+			</div>
+			<!-- <div *ngFor="let item of datosArray  ; let i = index" [attr.data-index]="i"> -->
+			<div *ngFor="let item of softskills | async">
+				<mat-card (click)="selectsoftSkill(item)">
+					<mat-card-actions>
+						<div class="align-items-end box1">
+							<button (click)="openEditDialog(item)" matTooltip="Editar el registro...">
+								<img src={{logopencil}} alt="editar" class="chelogo mt-1" />
+							</button>
+							<button (click)="deleteItem(item.id)" matTooltip="Eliminar el registro...">
+								<img src={{logodelete}} alt="Eliminar" class="chelogo mt-1" />
+							</button>
+						</div>
+					</mat-card-actions>
+					<mat-card-content>
+						<h4><b>Nombre: </b>{{item.name}}</h4>
+						<h4><b>Imagen URL: </b>{{item.urlImage}}</h4>
+						<div
+							class="d-flex container-fluid flex-direction-row justify-content-center align-items-center">
+							<img mat-card-image class="cheimg" src={{item.urlImage}} alt="">
+						</div>
+						<h4><b>Nivel: {{item.level}}</b></h4>
+
+					</mat-card-content>
+					<mat-card-footer>
+						<mat-progress-bar mode="determinate" value={{item.level.toString()}}
+							color="accent"></mat-progress-bar>
+						<mat-progress-spinner mode='determinate' diameter={{item.level}}
+							color={{color}}></mat-progress-spinner>
+					</mat-card-footer>
+				</mat-card>
+			</div>
+		</div>
+		<ng-template #dialogTemplate let-dialogRef="dialogRef">
+			<h2 mat-dialog-title>{{ editMode ? 'Editar Softskills' : 'Añadir Softskills' }}</h2>
+			<mat-dialog-content>
+				<!-- <form (submit)="savesoftSkill()"> -->
+
+				<mat-form-field>
+					<mat-label>Nombre</mat-label>
+					<input matInput [(ngModel)]="dialogData.name" placeholder="Name" required>
+				</mat-form-field>
+				<mat-form-field>
+					<mat-label>URL de la imagen</mat-label>
+					<input matInput type="text" [(ngModel)]="dialogData.urlImage" placeholder="Imagen" required>
+				</mat-form-field>
+				<input type="file"  (change)="onFileSelected($event)" placeholder="Imagen">
+				<ng-container *ngIf="!downloadURL">
+					<script>this.downloadURL = dialogData.urlImage.value;</script>
+					<!-- <img [src]="downloadURL" alt="Preview" class="preview-image"> -->
+				</ng-container>
+
+				<ng-container *ngIf="downloadURL">
+					<img [src]="downloadURL" alt="Preview" class="preview-image">
+				</ng-container>
+
+				<mat-form-field class="example-margin">
+					<mat-label>Nivel</mat-label>
+					<input matInput [(ngModel)]="dialogData.level" type="number" max="100" min="0" placeholder="Nivel" required>
+					<mat-slider class="example-margin" [max]="max" thumbLabel="true" tickInterval="true" min="0"
+						max="100" [(ngModel)]="dialogData.level" name="level">
+					</mat-slider>
+				</mat-form-field>
+				<!-- </form> -->
+				<mat-dialog-actions>
+					<button mat-button (click)="dialogRef.close()">Cancelar</button>
+					<!-- <button mat-button (click)="saveItem()">Guardar</button> [disabled]="!dialogForm.valid" -->
+					<button mat-button (click)="savesoftSkill()">Guardar</button> <!-- [disabled]="!dialogForm.valid" -->
+				</mat-dialog-actions>
+			</mat-dialog-content>
+		</ng-template>
+	</div>
+</section>
