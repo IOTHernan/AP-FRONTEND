@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
-import { Iaboutme } from 'src/app/interfaces/iaboutme';
-@Component({
+/* import { Iaboutme } from 'src/app/interfaces/iaboutme';
+ */@Component({
 	selector: 'app-navbar',
 	templateUrl: './navbar.component.html',
 	styleUrls: ['./navbar.component.css']
@@ -18,33 +18,33 @@ export class NavbarComponent implements OnInit {
 	registerActive: Boolean = false;
 	portfolioActive: Boolean = false;
 	pageNotFoundActive: Boolean = false;
-	datosCollection2: AngularFirestoreCollection<any>;
-	datos2!: Observable<Iaboutme[]>;
+/* 	datosCollection2: AngularFirestoreCollection<any>;
+ */	/* datos2!: Observable<Iaboutme[]>; */
 	profilePicture!: any;
 	datosArray2!: any[];
 	nombreColeccion2 = 'aboutme';
-	logopencil = "https://drive.google.com/uc?export=download&id=1jA2K7nPYax0JVefFmgn8HvsYre_25zie";
-	logoadd = "https://drive.google.com/uc?export=download&id=11BKh21cSfuiTBDHbY26XH5Ux9TBVYdWm";
-	logoedu = "https://drive.google.com/uc?export=download&id=1_TzJ4uPlPA_qU9DaaARLKqlLoXVi5pWu   ";
-	logosave = "https://drive.google.com/uc?export=download&id=1QjXoDP0V0L7EHnjlfAx5bMFH2T-NbYU7";
-	logocancel = "https://drive.google.com/uc?export=download&id=1DnHtyYLt7LgH7Nl6HsIOfSh2CDjNiYAE";
-	logodelete = "https://drive.google.com/uc?export=download&id=1iW5i4HOltXKRwV0Q2qsJp6mrZvmFq0rw";
-
-	constructor(
+	logopencil="./../../../assets/media/logoPencil.png";
+	logoadd="./../../../assets/media/logoAdd.png";
+	logoedu="./../../../assets/media/logoEdu.png";
+	logosave="./../../../assets/media/logoSave.png";
+	logocancel="./../../../assets/media/logoCancel.png";
+	logodelete="./../../../assets/media/logoDelete.png";
+	logoSkill = "./../../../assets/media/cheskills.jpg";
+		constructor(
 		private router: Router, 
 		private afAuth: AngularFireAuth,
 		private firestore: AngularFirestore) { 
-			this.datosCollection2 = this.firestore.collection(this.nombreColeccion2);
+			/* this.datosCollection2 = this.firestore.collection(this.nombreColeccion2);
 			this.datos2 = this.datosCollection2.valueChanges();
-		
+		 */
 		}
 
 	ngOnInit(): void {
-		this.getDatosArray2();
-		console.log("DEBUG: NATBAR, ruta activa -ln32-:", this.router.url);
+/* 		this.getDatosArray2();
+ */		console.log("DEBUG: NATBAR, ruta activa -ln32-:", this.router.url);
 		this.afAuth.onAuthStateChanged((user) => {
-			this.getDatosArray2();
-
+/* 			this.getDatosArray2();
+ */
 			if (user) {
 				// this.imagenPerfil = this.firestore
 				// 	.doc<any>(`users/${user.uid}`)
@@ -126,7 +126,7 @@ export class NavbarComponent implements OnInit {
 			})
 			.catch(error => console.error('Error al cerrar sesión', error));
 	}
-	getDatosArray2(): void {
+	/* getDatosArray2(): void {
 		this.datosCollection2.snapshotChanges().pipe(
 			map((snapshots) => {
 				return snapshots.map((snapshot) => {
@@ -140,5 +140,5 @@ export class NavbarComponent implements OnInit {
 			this.profilePicture = this.datosArray2[0].profilePicture;
 			console.log('DEBUG: NATBAT getDatosArray2 -LN229-', this.datosArray2);
 		})
-	}
+	} */
 }

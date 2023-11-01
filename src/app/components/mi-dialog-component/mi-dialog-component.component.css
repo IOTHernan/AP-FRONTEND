@@ -5,6 +5,7 @@
     height: auto;
     /* padding: 0; */
     color:chartreuse;
+    opacity: 0.5;
 }
 .dialog-title {
     font-size: 24px;

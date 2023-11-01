@@ -1,214 +1,39 @@
 <!-- Profile -->
-<!-- <div class="card mat-card mx-auto border">
-	<p>list</p> -->
-<!-- <ul>
-		<li *ngFor="let dato of datos | async">
-			{{ dato | json }}
-		</li>
-	</ul> -->
-<!-- <ul>
-		<li *ngFor="let dato of datosArray">
-			{{ dato | json }}
-			<p>Nombres: {{ dato.nombres}}</p><br>
-			<p>Apellido: {{ dato.apellido}}</p><br>
-			<p>Fecha de nacimiento: {{ dato.fecha_nacimiento}}</p><br>
-			<p>Nacionalidad: {{ dato.nacionalidad}}</p><br>
-			<p>mail: {{ dato.mail}}</p><br>
-			<p>Sobre mi: {{ dato.sobre_mi}}</p><br>
-			<p>Ocupación: {{ dato.ocupacion}}</p><br>
-			<p>Imagen background header: {{dato.imagen_background_header}}</p><br>
-			<img src={{dato.imagen_background_header}} alt="Imagen..." width="100px" heigth="100px">
-			<p>Imagen perfil: {{dato.imagen_perfil}}</p><br>
-			<img src={{dato.imagen_perfil}} alt="" width="100px" heigth="100px">
-			<p>id_domicilio: {{ dato.id_domicilio}}</p><br>
-		</li>
-	</ul>
-	<h1>Nro Reg: {{ numRegistros }}</h1>
 
-	<h2>datosarray2 aboutme</h2>
-	<ul>
-		<li *ngFor="let dato of datosArray2">
-			{{ dato | json }}
-			<p>bannerImage: {{ dato.bannerImage }}</p><br>
-			<img src={{dato.bannerImage}} alt="" width="100px" heigth="100px">
-
-			<p>profilePicture: {{ dato.profilePicture}}</p><br>
-			<img src={{dato.profilePicture}} alt="" width="100px" heigth="100px">
-
-			<p>ubication: {{ dato.ubication}}</p><br>
-			<p>institution: {{ dato.institution}}</p><br>
-			<p>institutionImage: {{ dato.institutionImage}}</p><br>
-			<img src={{dato.institutionImage}} alt="" width="100px" heigth="100px">
-
-			<p>posicion: {{ dato.posicion}}</p><br>
-			<p>descripcion: {{ dato.descripcion}}</p><br>
-			<p>bannerImage2: {{ dato.bannerImage2}}</p><br>
-			<img src={{dato.bannerImage2}} alt="" width="100px" heigth="100px">
-			<p>profilePicture2: {{dato.profilePicture2}}</p><br>
-			<img src={{dato.profilePicture2}} alt="Imagen..." width="100px" heigth="100px">
-			<p>about: {{dato.about}}</p><br>
-			<p>id_domicilio: {{ dato.id_domicilio}}</p><br>
-		</li>
-	</ul>
-	<h1>Nro Reg: {{ numRegistros2 }}</h1>
-</div> -->
-<div class="container shadow">
-	<div class="row mt-5">
-		<h5 class="text-center p-1 bg-dark text-light rounded border p-2">Sobre Mí</h5>
+<div class="card mat-card" id="first-card">
+	<div id="profile-background" class="img">
+		<img src="https://drive.google.com/uc?export=download&id=1IOa0mRWY14_R2miJC3q2g22DLMowd49L" alt="Backgroung">
 	</div>
-	<ul>
-		<li *ngFor="let dato of miArray">
-			<p>dato</p>
-		</li>
-	</ul>
-	<!-- <div class="justify-content-center p-2" id="card-about" *ngFor="let dato of datosArray ; let i = index"
-		[attr.data-index]="i"> -->
-	<div class="justify-content-center p-2" id="card-about">
-		<!-- <p>{{bannerImage}}</p> -->
-		<img class="card-img-top" src={{bannerImage}} alt="Card image cap">
-		<div id="info">
-			<div class="info-about">
-				<div class="img-about mb-3">
-					<img src={{profilePicture}} alt="ProfilePicture" id="img-about" width="50px" height="50px">
-					<a href="#" data-bs-toggle="modal" data-bs-target="#editmenu"><i
-							class="fa-solid fa-pen-to-square"></i></a>
-				</div>
-
-				<div class="mb-3" id="info-data">
-					<div class="font1">
-						<h2>{{nombres}} {{apellido}}</h2>
-						<div id="info-company">{{ocupacion}}</div>
-						<div id="info-contact">
-							<span>{{ubication}}</span>
-						</div>
-					</div>
-					<ul id="info-details">
-						<li>
-							<a href={{company[1]}} style="text-decoration: none;">
-								<img src={{company[2]}} alt="LogoInti" width="30px" height="30px">
-								<!-- <img src="../../../assets/images/cheinti.png" alt="LogoInti" width="20px" height="20px"> -->
-								<h5>{{company[0]}}</h5>
-							</a>
-						</li>
-					</ul>
-				</div>
+	<div id="info" style="padding: 36px;">
+		<div id="info-img">
+			<img class="profile-image" src="https://drive.google.com/uc?download&id=1DdFJjIWAxC9QQMOaUlxnddhe5nl6YPdI" alt="">
+			<div class="btn-edit">
+				<a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+			</div>
+			<div id="info-data">
 				<div>
-					<button type="button" class="btn btn-primary" matTooltip="Editar..." (click)="mostrarModal()">Editar
-						perfil...</button>
+					<h1>Hernan Canestraro</h1>
+					<div id="info-company">Informática en Argentina Programa</div>
+					<div id="info-contact">
+						<span>Buenos Aires (Argentina) </span>
+						<span><a href="#">Información de contacto</a></span>
+					</div>
 				</div>
-				<!-- <div id="info-action">
-					<a href="#" class="btn btn-primary font2">Intereses: </a>
-					<a href="#" class="btn btn-light font2" id="dropdownMenuAction" data-bs-toggle="dropdown"
-						aria-expanded="false">Añadir sección: </a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuAction">
-						<li><a class="dropdown-item" href="#">Añadir <strong>Cursos</strong></a></li>
-						<li><a class="dropdown-item" href="#">Añadir <strong>Pasantías</strong></a></li>
-					</ul>
-					<a href="#" class="btn btn-light" id="dropdownMenuAction" data-bs-toggle="dropdown"
-						aria-expanded="false">Más: </a>
-					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuAction">
-						<li><a class="dropdown-item" href="#">Compartir perfil</a></li>
-						<li><a class="dropdown-item" href="#">Descargar en PDF</a></li>
-					</ul>
-				</div> -->
+				<ul id="info-details">
+					<li><a href="#">
+						<img src="https://drive.google.com/uc?download&id=1-lX9QgBw8iGXLEgBd_pmdsM_Fz3l6LJn" alt="">
+						<h2>I.N.T.I.</h2>
+					</a></li>
+					<li><a href="#">
+						<h2>Argentina Programa</h2>
+					</a></li>
+				</ul>
+			</div>
+			<div id="info-actions">
+				<button type="button" class="btn btn-primary">Tengo interés en</button>
+				<button type="button" class="btn btn-primary">Añadir Sección</button>
+				<button type="button" class="btn btn-primary">Más</button>
 			</div>
 		</div>
 	</div>
 </div>
-
-<!-- <section> -->
-<ng-template #miModal>
-	<!-- <div class="modal"> -->
-	<!-- Menú de edición data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-			aria-labelledby="staticBackdropLabel" aria-hidden="true"-->
-	<div class="modal fade box1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="miModal">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="miModalLabel">Modificar perfil</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-
-					<ng-container *ngTemplateOutlet="miFormTemplate"></ng-container>
-						
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-</ng-template>
-<ng-template #miFormTemplate>
-	<form [formGroup]="formTemplate">
-		<div class="mb-3 box1">
-			<label for="nombres" class="form-label">Nombres</label>
-			<input class="form-control" type="text" formControlName="nombres" id="nombres"
-				placeholder="Escriba su nombre" aria-label="Escriba su nombre">
-		</div>
-		<div class="mb-3">
-			<label for="apellido" class="form-label">Apellido</label>
-			<input class="form-control" type="text" formControlName="apellido" id="apellido"
-				placeholder="Escriba su apellido" aria-label="Escriba su apellido">
-		</div>
-
-		<div class="mb-3">
-			<label for="fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
-			<input class="form-control" type="text" formControlName="fecha_nacimiento"
-				id="fecha_nacimiento" placeholder="Escriba su ocupación"
-				aria-label="Escriba su fecha de nacimiento">
-		</div>
-
-		<div class="mb-3">
-			<label for="nacionalidad" class="form-label">Nacionalidad:</label>
-			<input class="form-control" type="text" formControlName="nacionalidad" id="nacionalidad"
-				placeholder="Escriba su cuidad, provincia, país"
-				aria-label="Escriba su cuidad, provincia, país">
-		</div>
-
-		<div class="mb-3">
-			<label for="mail" class="form-label">Mail</label>
-			<input class="form-control" type="text" formControlName="email" id="email"
-				placeholder="Escriba su correo" aria-label="Escriba su correo">
-		</div>
-
-		<div class="mb-3">
-			<label for="sobre_mi" class="form-label">Sobre mi</label>
-			<input class="form-control" type="text" formControlName="sobre_mi" id="sobre_mi"
-				placeholder="Escriba su ocupación" aria-label="Escriba sobre Ud.">
-		</div>
-
-		<div class="mb-3">
-			<label for="ocupacion" class="form-label">Ocupación</label>
-			<input class="form-control" type="text" formControlName="ocupacion" id="ocupacion"
-				placeholder="Escriba su ocupación" aria-label="Escriba su ocupación">
-		</div>
-
-		<div class="mb-3">
-			<label for="imagen_background_header" class="form-label">Editar foto de banner</label>
-			<input class="form-control" type="text" formControlName="imagen_background_header"
-				id="imagen_background_header">
-		</div>
-
-		<div class="mb-3">
-			<label for="imagen_perfil" class="form-label">Editar foto de Perfil</label>
-			<input class="form-control" type="text" formControlName="imagen_perfil" id="imagen_perfil">
-		</div>
-
-		<div class="mb-3">
-			<label for="id_domicilio" class="form-label">Id Domicilio:</label>
-			<input class="form-control" type="text" formControlName="id_domicilio" id="id_domicilio">
-		</div>
-		<br>
-
-		<button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
-		<button type="submit" class="btn btn-primary ms-2">Guardar cambios</button>
-	</form>
-</ng-template>
-<!-- </section> -->
-<!-- END Profile-->

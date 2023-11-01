@@ -23,12 +23,13 @@ interface MiDocumento {
 
 export class BannerComponent implements OnInit {
 
-	logopencil = "https://drive.google.com/uc?export=download&id=1jA2K7nPYax0JVefFmgn8HvsYre_25zie";
-	logoadd = "https://drive.google.com/uc?export=download&id=11BKh21cSfuiTBDHbY26XH5Ux9TBVYdWm";
-	logoedu = "https://drive.google.com/uc?export=download&id=1_TzJ4uPlPA_qU9DaaARLKqlLoXVi5pWu";
-	logosave = "https://drive.google.com/uc?export=download&id=1QjXoDP0V0L7EHnjlfAx5bMFH2T-NbYU7";
-	logocancel = "https://drive.google.com/uc?export=download&id=1DnHtyYLt7LgH7Nl6HsIOfSh2CDjNiYAE";
-	logodelete = "https://drive.google.com/uc?export=download&id=1iW5i4HOltXKRwV0Q2qsJp6mrZvmFq0rw";
+	logopencil="./../../../assets/media/logoPencil.png";
+	logoadd="./../../../assets/media/logoAdd.png";
+	logoedu="./../../../assets/media/logoEdu.png";
+	logosave="./../../../assets/media/logoSave.png";
+	logocancel="./../../../assets/media/logoCancel.png";
+	logodelete="./../../../assets/media/logoDelete.png";
+	logoSkill = "./../../../assets/media/cheskills.jpg";
 	usuario: any = '';
 	formTemplate!: FormGroup;
 	@ViewChild('miModal') miModal: any;
@@ -88,7 +89,7 @@ export class BannerComponent implements OnInit {
 				mail: '',
 				sobre_mi: 'Autodidacta',
 				ocupacion: 'FullStack Developer Jr.',
-				image_background_header: '',
+				image_background_header: 'https://drive.google.com/uc?export=download&id=1IOa0mRWY14_R2miJC3q2g22DLMowd49L',
 				image_perfil: '',
 				id_domicilio: 'La Matanza, Buenos Aires, Argentina'
 			});
@@ -198,9 +199,11 @@ getDatosArray2(): void {
 	).subscribe((array2) => {
 		this.datosArray2 = array2;
 		this.dA2 = array2;
-		this.bannerImage = this.datosArray2[0].bannerImage;
+		/* this.bannerImage = this.datosArray2[0].bannerImage; */
+		this.bannerImage = "https://drive.google.com/uc?export=download&id=1IOa0mRWY14_R2miJC3q2g22DLMowd49L";
 		this.profilePicture = this.datosArray2[0].profilePicture;
-		this.company[0] = this.datosArray2[0].company[0];
+/* 		this.profilePicture = "https://drive.google.com/uc?export=download&id=1IOa0mRWY14_R2miJC3q2g22DLMowd49L";
+ */		this.company[0] = this.datosArray2[0].company[0];
 		this.company[1] = this.datosArray2[0].company[1];
 		this.company[2] = this.datosArray2[0].company[2];
 		// [0].company[0]

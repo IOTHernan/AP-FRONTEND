@@ -5,6 +5,12 @@
     left: 0;
     /* height: fit-content; */
 }
+.cheajc {
+    width: auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
 .logointi{
     justify-content: start;
     width: 150px;

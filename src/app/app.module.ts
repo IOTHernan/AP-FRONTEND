@@ -80,7 +80,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { CloudinaryConfig } from '@cloudinary/url-gen';
 import { MiDialogComponent } from './components/mi-dialog-component/mi-dialog-component.component';
 import { ErrorHandlingModule } from './modules/error-handling/error-handling.module';
-import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
+// import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 // import { PdfViewerComponent } from './components/pdf-viewer/pdf-viewer.component';
 // import { PhotoCaptureComponent } from './components/photo-capture/photo-capture.component';
@@ -96,11 +96,12 @@ const materialModules = [
 
 @NgModule({
 	declarations: [
-		AppComponent, NavbarComponent, BannerComponent, FooterComponent, Che404Component, EducacionComponent,
+		AppComponent, 
+		NavbarComponent, 
+		BannerComponent, FooterComponent, Che404Component, EducacionComponent,
 		ExperienciaComponent, SkillsComponent, SoftskillsComponent, ProyectosComponent, PortfolioComponent,
 		LoginComponent, AboutMeComponent, ContactFormComponent, RegisterComponent, MiDialogComponent,
-		ImageGalleryComponent, ConfirmationDialogComponent
-		// , PdfViewerComponent, PhotoCaptureComponent
+		ConfirmationDialogComponent
 	],
 	imports: [
 		BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule, FormsModule,
